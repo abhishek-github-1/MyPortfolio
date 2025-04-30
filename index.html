@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <script src="./loading.js"></script>
+    <title>Welcome</title>
+</head>
+<body>
+    <div class="overlay">
+
+    </div>
+    <header id="header">
+        <div class="logo">
+            <h2>Abhishek Sharma</h2>
+        </div>
+        <div class="nav">
+            <a href="javascript:void(0)" id="menubtn"><i class="fa fa-bars"></i></a>
+        </div>
+        <div class="sidemenu">
+            <span class="closebtn"><i class="fa fa-times"></i></span>
+            <ul class="sidenav">
+                <li class="sideitem"><a href="#" class="sidelink">Home</a></li>
+                <li class="sideitem"><a href="#aboutMe" class="sidelink">About Me</a></li>
+                <li class="sideitem"><a href="#mySkill" class="sidelink">My Skill</a></li>
+                <li class="sideitem"><a href="#" class="sidelink">My Achivements</a></li>
+                <li class="sideitem"><a href="#" class="sidelink">Projects and Researches</a></li>
+                <li class="sideitem"><a href="#footer" class="sidelink">Contact Me</a></li>
+            </ul>
+        </div>
+    </header>
+    <script>
+        document.querySelector("#menubtn").addEventListener("click", function(){
+            document.querySelector(".sidemenu").style.right="0px";
+            document.querySelector(".overlay").style.opacity = 1;
+            document.querySelector(".overlay").style.visibility = "visible";
+        })
+        document.querySelector(".closebtn").addEventListener("click", function(){
+            document.querySelector(".sidemenu").style.right="-255px";
+            document.querySelector(".overlay").style.opacity = 0;
+            document.querySelector(".overlay").style.visibility = "hidden";
+        })
+        document.querySelectorAll(".sidemenu .sidenav .sideitem").forEach((a) => {
+            a.addEventListener("click", function(){
+                document.querySelector(".sidemenu").style.right="-255px";
+                document.querySelector(".overlay").style.opacity = 0;
+                document.querySelector(".overlay").style.visibility = "hidden";
+            })
+        })
+    </script>
+    <section class="secn">
+        <div class="bg-layer">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+        <div class="front-layer">
+            <div></div>
+            <div class="profile-img">
+                <img src="./Picture2.jpg" width="100%">
+            </div>
+            <h1><span>I am</span> 
+                <div id="intro-title">
+                    <span>Developer</span>
+                    <span>Designer</span>
+                    <span>Researcher</span>
+                    <span>Abhishek</span>
+                </div>
+            </h1>
+        </div>
+    </section>
+    
+    <section class="secn" id="aboutMe" style="padding-top: 80px;height:60vh;">
+        <div class="container">
+            <div class="content">
+                <h1>About Me!</h1>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, </p>
+            </div>
+            <div>
+            </div>
+        </div>
+    </section>
+    <section class="secn" id="mySkill" style="padding-top: 80px;">
+        <div class="container" >
+            <div>
+            </div>
+            <div class="content" style="right:50px">
+                <h1>My Skills</h1>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, </p>
+            </div>
+        </div>
+    </section>
+    <section id="footer">
+        <h1>Abhishek Sharma</h1>
+        <h3>Contact : +91-9205501926</h3>
+        <h3>Email : abhishekcse12411012@iiitsonepat.ac.in</h3>
+        <ul class="social-icon">
+            <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-x-twitter"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+            <li><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
+        </ul>
+        <br><br><br>
+    </section>
+</body>
+</html>

@@ -1,0 +1,414 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    transition: all 0.2s ease-in-out;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top:0;
+    display: block;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease-in-out;
+}
+
+header{
+    position: fixed;
+    top:0;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    z-index: 10;
+    color: #fff;
+    transition: all 0.5s ease-in-out;
+}
+
+.nav{
+    position: absolute;
+    right: 30px;
+    top:12px;
+    font-size: 20px;
+}
+.nav a{
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+}
+header .nav a:hover{
+    background-color: #fff;
+    color: #222;
+}
+.scrolled .nav a:hover{
+    background-color: #0043a7;
+    color:#fff;
+}
+.scrolled{
+    background-color: #fff;
+    color:#222;
+    border-bottom: 1px solid #44444469;
+    box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.5);
+    animation: shownavbar 0.5s ease-in-out forwards;
+}
+@keyframes shownavbar{
+    0%{
+        top:-100px;
+    }
+    100%{
+        top:0;
+    }
+}
+.scrolled .nav a{
+    color:#222;
+}
+.secn{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.bg-layer{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color:rgb(0, 68, 255);
+    background-size: 400% 400%;
+    overflow: hidden;
+    
+    animation: bg-animate 5s ease-in-out infinite alternate-reverse;
+}
+.bg-layer .circle{
+    display:block;
+    width: 500px;
+    height:500px;
+    border-radius: 100%;
+}
+.bg-layer .circle:nth-child(2){
+    position: absolute;
+    bottom:-200px;
+    left:20%;
+    width: 400px;
+    height: 400px;
+    background-color:#afccf7;
+    animation: animatecircle1 5s linear infinite running alternate-reverse;
+    filter: blur(0px);
+}
+@keyframes animatecircle1 {
+    0%{
+        left:20%;
+        filter:blur(0px);
+    }
+    50%{
+        left:calc(50% - 200px);
+    }
+    100%{
+        left:70%;
+        filter:blur(10px);
+    }
+}
+
+.bg-layer .circle:nth-child(4){
+    position: absolute;
+    top:-200px;
+    left:70%;
+    width: 400px;
+    height: 400px;
+    background-color:#afccf7;
+    animation: animatecircle2 5s linear infinite running alternate-reverse;
+    filter: blur(0px);
+}
+@keyframes animatecircle2 {
+    0%{
+        left:70%;
+        filter:blur(0px);
+    }
+    50%{
+        left:calc(50% - 200px);
+    }
+    100%{
+        left:20%;
+        filter:blur(10px);
+    }
+}
+
+.bg-layer .circle:nth-child(1){
+    position: absolute;
+    top:-150px;
+    left:-150px;
+    background-color:#5297ff;
+    animation: circle1 5s linear infinite running alternate-reverse;
+    filter:blur(10px);
+}
+@keyframes circle1 {
+    0%{
+        top:-150px;
+        left:-150px;
+        filter:blur(10px);
+    }
+    100%{
+        top:500px;
+        left:-50px;
+        filter:blur(0px);
+    }
+}
+.bg-layer .circle:nth-child(3){
+    position: absolute;
+    bottom:-150px;
+    right:-150px;
+    background-color:#7bb0ff;
+    animation: circle3 5s linear infinite running alternate-reverse;
+    filter:blur(10px);
+}
+@keyframes circle3 {
+    0%{
+        bottom:-150px;
+        right:-150px;
+        filter:blur(10px);
+    }
+    100%{
+        bottom:500px;
+        right:-50px;
+        filter:blur(0px);
+    }
+}
+
+.profile-img{
+    display: flex;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+}
+
+.profile-img img{
+    box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.5);
+    width: 180px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    transition: all 0.1s ease-in-out;
+    position: absolute;
+    transition: all 0.5s ease;
+}
+
+.scroll-img1{
+    transform: translate(415%, 312%) scale(1.5);
+    transition: all 0.5s ease;
+    box-shadow: 0px 0px 20px 5px rgba(201, 201, 201, 0.5) !important;
+    z-index: 1;
+}
+
+.scroll-img2{
+    transform: translate(-80%, 560%) scale(1.8);
+    transition: all 0.5s ease;
+    box-shadow: 0px 0px 20px 5px rgba(201, 201, 201, 0.5) !important;
+    z-index: 1;
+}
+
+.scroll-img3{
+    transform: translate(186%, 820%) scale(1.1);
+    transition: all 0.5s ease;
+    box-shadow: 0px 0px 20px 5px rgba(201, 201, 201, 0.5) !important;
+    z-index: 1;
+}
+
+.front-layer{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display:grid;
+    grid-template-columns: 0.20fr 0.15fr 0.65fr;
+    grid-gap:50px;
+}
+.front-layer h1{
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    color:#fff
+}
+.front-layer h1 span{
+    font-size: 2em;
+    color: #fff;
+   
+}
+#intro-title{
+    display: block;
+    width: 420px;
+    height: 2.6em;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    top:5px;
+    margin-left:20px;
+    display:flex;
+    flex-direction: column;
+}
+#intro-title span{
+    font-size: 2em;
+    position: relative;
+    animation: scrolltitle 10s ease-in-out infinite both running;
+}
+@keyframes scrolltitle {
+    0%{
+        top:0;
+    }
+    23%{
+        top:0;
+    }
+    25%{
+        top:-1.13em;
+    }
+    48%{
+        top:-1.13em;
+    }
+    50%{
+        top:-2.28em;
+    }
+    73%{
+        top:-2.28em;
+    }
+    75%{
+        top:-3.42em;
+    }
+    98%{
+        top: -3.42em;
+    }
+    100%{
+        top: 0;
+    }
+}
+@keyframes fade {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.container{
+    width: 100%;
+    height: max-content;
+    display: grid;
+    grid-template-columns: 0.5fr 0.50fr;
+    grid-gap: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+    position: relative;
+}
+.container .content{
+    width: 60%;
+    height: max-content;
+    padding: 40px;
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+}
+.container .content h1{
+    font-size: 2.5em;
+    text-align: center;
+}
+.container .content p{
+    text-align: justify;
+}
+.sidemenu{
+    position:absolute;
+    width: 250px;
+    height: 100vh;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #fff;
+    top:0px;
+    right:-255px;
+    z-index:2;
+    transition: all 0.2s ease-in-out;
+}
+.sidemenu .closebtn{
+    display:block;
+    padding:10px 12px;
+    width: max-content;
+    background-color: #0368ff;
+    color:#fff;
+    border-radius: 100%;
+    float: right;
+    transition: all 0.2s ease-in-out;
+}
+.sidemenu .closebtn:hover{
+    background-color: #002e74;
+}
+.sidenav{
+    list-style: none;
+    width: 100%;
+    margin-top:100px;
+}
+.sidenav .sideitem .sidelink{
+    display:block;
+    width: 100%;
+    padding:10px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color:#333;
+    transition: all 0.2s ease-in-out;
+    border-radius: 0px;
+    text-align: center;
+    
+}
+.sidenav .sideitem .sidelink:hover{
+    background-color: rgb(0, 102, 255);
+    color:#fff;
+    border-radius: 50px;
+}
+#footer{
+    padding-top: 100px;
+    text-align: center;
+}
+.social-icon{
+    display: flex;
+    list-style: none;
+    margin-top: 20px;
+    justify-content: center;
+}
+.social-icon li a{
+    padding: 10px;
+    margin: 5px;
+    border-radius: 50%;
+    border: 2.5px solid #000000;
+    color: #000000;
+    transition: all 0.5s ease;
+}
+.social-icon li:nth-of-type(1) a:hover{
+    background-color: #0055ff;
+    border-color: #0055ff;
+    box-shadow: 0px 0px 5px 2px rgba(0, 85, 255, 0.5);   
+    color:#fff;
+}
+.social-icon li:nth-of-type(2) a:hover{
+    background-color: #000000;
+    border-color: #000000;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.5);  
+    color:#fff; 
+}
+.social-icon li:nth-of-type(3) a:hover{
+    background-color: #ff0000;
+    border-color: #ff0000;
+    box-shadow: 0px 0px 5px 2px rgba(255, 0, 0, 0.5); 
+    color:#fff;  
+}
+.social-icon li:nth-of-type(4) a:hover{
+    background-color: #002d87;
+    border-color: #002d87;
+    box-shadow: 0px 0px 5px 2px rgba(0, 45, 135, 0.5);  
+    color:#fff; 
+}
